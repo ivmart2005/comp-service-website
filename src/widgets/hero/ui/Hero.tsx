@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <section className={styles.hero}>
       <Image
-        src="/images/background.jpg"
+        src="/comp-service-website/images/background.jpg"
         alt="Ремонт ноутбуков в Перми"
         width={1920}
         height={960}
@@ -29,8 +29,8 @@ export const Hero = () => {
             </p>
 
             <a href="#contacts" className={styles.button}>
-            <span className={styles.buttonText}>Связаться с нами</span>
-            <ChevronRight size={24} />
+              <span className={styles.buttonText}>Связаться с нами</span>
+              <ChevronRight size={24} />
             </a>
           </div>
         </div>
