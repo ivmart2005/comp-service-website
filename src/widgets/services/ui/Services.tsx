@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Services.module.css';
+import { assetPath } from '@/lib/assetPath';
 
 const servicesData = [
   {
     title: 'Восстановление после залития',
     description: 'Профессиональная чистка и замена компонентов',
-    image: '/images/mock-picture.jpg',
+    image: assetPath('/images/mock-picture.jpg'),
     link: '#contacts',
     linkText: 'Подробнее →',
   },
