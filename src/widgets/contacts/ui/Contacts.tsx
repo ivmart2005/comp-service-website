@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { assetPath } from '@/lib/assetPath';
 import styles from './Contacts.module.css';
 
 export const Contacts = () => {
@@ -68,7 +69,7 @@ export const Contacts = () => {
             className={styles.mapWrapper}
           >
             <Image
-              src="/images/map-preview.jpg"
+              src={assetPath('/images/map-preview.jpg')}
               alt="Карта проезда"
               fill
               sizes="(max-width: 968px) 100vw, 50vw"
