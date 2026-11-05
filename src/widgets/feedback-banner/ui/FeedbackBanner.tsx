@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './FeedbackBanner.module.css';
+import { assetPath } from '@/lib/assetPath';
 
 export const FeedbackBanner = () => {
   return (
@@ -12,7 +13,7 @@ export const FeedbackBanner = () => {
       <div className={styles.bannerCard}>
         <div className={styles.imageWrapper}>
           <Image
-            src="/images/contacts-form.jpg"
+            src={assetPath('/images/contacts-form.jpg')}
             alt="Ремонт электроники"
             fill
             unoptimized
