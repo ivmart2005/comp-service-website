@@ -1,0 +1,205 @@
+.contacts {
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.titleMarker {
+  width: 6px;
+  height: 28px;
+  background-color: #0a99a8;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a202c;
+  letter-spacing: -0.5px;
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cardWrapper {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  background-image: url('/images/background-map.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+  border: 1px solid #e2e6e9;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1), 0 6px 16px -2px rgba(0, 0, 0, 0.05), 0 0 10px -2px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.infoContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconWrapper {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconWrapper svg {
+  width: 28px;
+  height: 28px;
+}
+
+.infoLabel {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 2px;
+}
+
+.infoText {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1a202c;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.infoText span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.actionButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border: 2px solid #0a99a8;
+  border-radius: 12px;
+  color: #0a99a8;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.actionButton:hover {
+  background-color: #0a99a8;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(10, 153, 168, 0.3);
+}
+
+.mapWrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #e2e6e9;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.mapImage {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.mapWrapper:hover .mapImage {
+  transform: scale(1.03);
+}
+
+.mapOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease;
+}
+
+.mapWrapper:hover .mapOverlay {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.mapPinBox {
+  background: #ffffff;
+  padding: 12px 20px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  font-weight: 600;
+  color: #1a202c;
+  font-size: 0.95rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mapWrapper:hover .mapPinBox {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(10, 153, 168, 0.25);
+}
+
+@media (max-width: 968px) {
+  .cardWrapper {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+  
+  .mapWrapper {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+  }
+}
